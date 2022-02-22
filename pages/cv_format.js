@@ -1,9 +1,8 @@
 import Head from 'next/head'
 import Skill from '../models/Skill.js'
 import Profile from '../models/Profile.js'
-import SocialMenu from '../components/SocialMenu'
-import LeftColumn from '../components/LeftColumn'
-import RightColumn from '../components/RightColumn'
+import LeftColumnPdf from '../components/LeftColumnPdf'
+import RightColumnPdf from '../components/RightColumnPdf'
 import connectMongoClient from '../middleware/ConnectMongoClient.js'
 
 export default function Home ({ profile, skills }) {
@@ -13,18 +12,17 @@ export default function Home ({ profile, skills }) {
   } = gP[0]
   const getSkills = JSON.parse(skills)
   return (
-    <div className='block md:flex md:h-screen font-sans min-h-screen bg-arian-negro'>
+    <div className='flex md:h-screen font-sans min-h-screen'>
       <Head>
         <title>Curriculum Web · Arián Noel Fernández</title>
         <meta name="description" content="Siendo Web Developer, ¿por qué tendría un curriculum en PDF>" />
         <link rel="icon" href="/favicon.png" />
       </Head>
-      <div className='block md:w-1/2 md:h-full lg:w-auto lg:flex'>
-        <SocialMenu profile={{ email, linkedin, github, instagram }} />
-        <LeftColumn profile={{ name, lastName, occupation, avatar }} skills={getSkills} />
+      <div className='w-auto flex'>
+        <LeftColumnPdf profile={{ name, lastName, occupation, avatar, email, linkedin, github, instagram }} skills={getSkills} />
       </div>
-      <div className='block md:flex-auto md:w-1/2'>
-        <RightColumn profile={{ about, experience, cvInfo }} />
+      <div className='flex-auto w-1/2'>
+        <RightColumnPdf profile={{ about, experience, cvInfo }} />
       </div>
     </div>
   )

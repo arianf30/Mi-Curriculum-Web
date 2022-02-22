@@ -1,0 +1,8 @@
+POST http://localhost:3000/api/skill
+Content-Type: application/json
+
+{
+  "name": "MySQL",
+  "order": 6,
+  "skill": "10/12"
+}
