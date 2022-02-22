@@ -1,15 +1,17 @@
+import Link from "next/link"
+
 export default function SocialMenu ({ profile }) {
   const { email, linkedin, github, instagram } = profile
   return (
     <div className='flex h-16 lg:h-screen bg-arian-negro border-r border-arian-grisclaro box-border'>
       <div className='flex lg:block h-4/4 w-full lg:w-20 lg:hover:w-24 lg:ease-in lg:duration-300'>
         {/* Download */}
-        <a href="/api/services/cv_pdf" className='flex w-1/5 lg:h-1/5 lg:w-full justify-center items-center cursor-pointer fill-arian-grisclaro hover:fill-arian-blanco2 text-transparent hover:text-arian-blanco ease-in duration-300'>
+        <Link href="/api/services/cv_pdf" className='flex w-1/5 lg:h-1/5 lg:w-full justify-center items-center cursor-pointer fill-arian-grisclaro hover:fill-arian-blanco2 text-transparent hover:text-arian-blanco ease-in duration-300'>
           <div className='w-full text-center justify-center'>
             <svg className='inline-block' width='38' viewBox='0 0 640 512' xmlns='http://www.w3.org/2000/svg'><path d='m537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2-27.7-48-79.4-80.2-138.7-80.2-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1-56 19.7-96.2 73.1-96.2 135.9 0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zm-132.9 88.7-105.4 105.4c-6.2 6.2-16.4 6.2-22.6 0l-105.4-105.4c-10.1-10.1-2.9-27.3 11.3-27.3h65.4v-112c0-8.8 7.2-16 16-16h48c8.8 0 16 7.2 16 16v112h65.4c14.2 0 21.4 17.2 11.3 27.3z' /></svg>
             <p className='hidden lg:block text-xs mt-1'>Curriculum</p>
           </div>
-        </a>
+        </Link>
 
         {/* Email */}
         <a href={`mailto: ${email}`} className='flex w-1/5 lg:h-1/5 lg:w-full justify-center items-center cursor-pointer fill-arian-grisclaro hover:fill-arian-blanco2 text-transparent hover:text-arian-blanco ease-in duration-300'>

@@ -1,4 +1,4 @@
-import useTimeAgo from '../../hooks/useTimeAgo'
+import timeAgo from '../../utils/timeAgo'
 
 export default function RightColumn ({ profile }) {
   const { about, experience, cvInfo } = profile
@@ -48,7 +48,7 @@ export default function RightColumn ({ profile }) {
             <div className="mt-8" key={`experience-${index}`}>
             <div className='flex items-baseline mb-4'>
               {/* <div className='bg-arian-grisclaro2 rounded-full h-2 w-2' /> */}
-                <div className='flex-1 text-base font-medium'>{item.companyLink ? (<a href={item.companyLink} className='italic hover:text-arian-lila transition duration-300 ease-in-out' target="_blank" rel="noreferrer">{item.companyName}</a>) : item.companyName} <font className='text-xs text-arian-grisclaro2'>|{ (item.companyTimeFinished === 'Now' ? ' actualidad · ' : '') }{item.companyTimeInit && item.companyTimeFinished && useTimeAgo(item.companyTimeInit, item.companyTimeFinished)}</font></div>
+                <div className='flex-1 text-base font-medium'>{item.companyLink ? (<a href={item.companyLink} className='italic hover:text-arian-lila transition duration-300 ease-in-out' target="_blank" rel="noreferrer">{item.companyName}</a>) : item.companyName} <font className='text-xs text-arian-grisclaro2'>|{ (item.companyTimeFinished === 'Now' ? ' actualidad · ' : '') }{item.companyTimeInit && item.companyTimeFinished && timeAgo(item.companyTimeInit, item.companyTimeFinished)}</font></div>
             </div>
             {paragraphs.map((p, pInd) => (
               <p className='mb-3' key={`experience-p-${index}-${pInd}`}>{p}</p>

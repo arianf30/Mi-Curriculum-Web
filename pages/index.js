@@ -16,7 +16,7 @@ export default function Home ({ profile, skills }) {
     <div className='block md:flex md:h-screen font-sans min-h-screen bg-arian-negro'>
       <Head>
         <title>Curriculum Web · Arián Noel Fernández</title>
-        <meta name="description" content="Siendo Web Developer, ¿por qué tendría un curriculum en PDF>" />
+        <meta name="description" content="Siendo Web Developer, ¿por qué tendría un curriculum en PDF?" />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <div className='block md:w-1/2 md:h-full lg:w-auto lg:flex'>
