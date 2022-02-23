@@ -4,7 +4,7 @@ import Profile from '../models/Profile.js'
 import SocialMenu from '../components/SocialMenu'
 import LeftColumn from '../components/LeftColumn'
 import RightColumn from '../components/RightColumn'
-import connectMongoClient from '../middleware/ConnectMongoClient.js'
+import connectMongoClient from '../middleware/connectMongoClient.js'
 import { positions, Provider } from "react-alert"
 import AlertTemplate from "react-alert-template-basic"
 

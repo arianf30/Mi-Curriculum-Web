@@ -3,7 +3,7 @@ import Skill from '../models/Skill.js'
 import Profile from '../models/Profile.js'
 import LeftColumnPdf from '../components/LeftColumnPdf'
 import RightColumnPdf from '../components/RightColumnPdf'
-import connectMongoClient from '../middleware/ConnectMongoClient.js'
+import connectMongoClient from '../middleware/connectMongoClient.js'
 
 export default function Home ({ profile, skills }) {
   const gP = JSON.parse(profile)
