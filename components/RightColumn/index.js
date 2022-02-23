@@ -85,7 +85,7 @@ export default function RightColumn ({ profile }) {
         {cvInfo.paragraphs.map((p, index) => (
           <p className='mb-3' key={`cvInfo-${index}`}>{p}</p>
         ))}
-        <p className='mb-3'>Mirá el proyecto en <a href={cvInfo.linkGithub} target="_blank" className="underline decoration-4 cursor-pointer" rel="noreferrer">GitHub</a></p>
+        <p className='mb-3'>Mirá el proyecto en <a href={cvInfo.githubLink} target="_blank" className="underline decoration-4 cursor-pointer" rel="noreferrer">GitHub</a></p>
         <GridTecnologies />
       </div>
 
