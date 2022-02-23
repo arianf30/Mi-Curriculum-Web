@@ -12,7 +12,6 @@
     "bluebird": "^3.7.2",
     "dayjs": "1.10.7",
     "handlebars": "^4.7.7",
-    "html-pdf-node": "1.0.8",
     "inline-css": "^3.0.0",
     "mongoose": "6.2.3",
     "next": "12.1.0",
