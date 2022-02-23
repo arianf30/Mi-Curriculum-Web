@@ -1,5 +1,5 @@
 import pdf from 'html-pdf-node'
-import stream from 'stream'
+// import stream from 'stream'
 const options = { format: 'A4', landscape: false, scale: 0.70, printBackground: true }
 const file = { url: 'https://ariannoel.com/cv_format' }
 
