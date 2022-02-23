@@ -17,9 +17,7 @@ async function generatePdf(file, options, callback) {
     delete options.args;
   }
 
-  const browser = await puppeteer.launch({
-    args: args
-  });
+  const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
   if(file.content) {
@@ -32,11 +30,11 @@ async function generatePdf(file, options, callback) {
 
     // We set the page content as the generated html by handlebars
     await page.setContent(html, {
-      waitUntil: 'networkidle0', // wait for page to load completely
+      waitUntil: 'networkidle2', // wait for page to load completely
     });
   } else {
     await page.goto(file.url, {
-      waitUntil:[ 'load', 'networkidle0'], // wait for page to load completely
+      waitUntil:[ 'load', 'networkidle2'], // wait for page to load completely
     });
   }
 
