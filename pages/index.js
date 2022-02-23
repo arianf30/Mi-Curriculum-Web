@@ -5,6 +5,13 @@ import SocialMenu from '../components/SocialMenu'
 import LeftColumn from '../components/LeftColumn'
 import RightColumn from '../components/RightColumn'
 import connectMongoClient from '../middleware/ConnectMongoClient.js'
+import { positions, Provider } from "react-alert"
+import AlertTemplate from "react-alert-template-basic"
+
+const options = {
+  timeout: 5000,
+  position: positions.TOP_RIGHT
+};
 
 export default function Home ({ profile, skills }) {
   const gP = JSON.parse(profile)
@@ -13,20 +20,22 @@ export default function Home ({ profile, skills }) {
   } = gP[0]
   const getSkills = JSON.parse(skills)
   return (
-    <div className='block md:flex md:h-screen font-sans min-h-screen bg-arian-negro'>
-      <Head>
-        <title>Curriculum Web · Arián Noel Fernández</title>
-        <meta name="description" content="Siendo Web Developer, ¿por qué tendría un curriculum en PDF?" />
-        <link rel="icon" href="/favicon.png" />
-      </Head>
-      <div className='block md:w-1/2 md:h-full lg:w-auto lg:flex'>
-        <SocialMenu profile={{ email, linkedin, github, instagram }} />
-        <LeftColumn profile={{ name, lastName, occupation, avatar }} skills={getSkills} />
+    <Provider template={AlertTemplate} {...options}>
+      <div className='block md:flex md:h-screen font-sans min-h-screen bg-arian-negro'>
+        <Head>
+          <title>Curriculum Web · Arián Noel Fernández</title>
+          <meta name="description" content="Siendo Web Developer, ¿por qué tendría un curriculum en PDF?" />
+          <link rel="icon" href="/favicon.png" />
+        </Head>
+        <div className='block md:w-1/2 md:h-full lg:w-auto lg:flex'>
+          <SocialMenu profile={{ email, linkedin, github, instagram }} />
+          <LeftColumn profile={{ name, lastName, occupation, avatar }} skills={getSkills} />
+        </div>
+        <div className='block md:flex-auto md:w-1/2'>
+          <RightColumn profile={{ about, experience, cvInfo }} />
+        </div>
       </div>
-      <div className='block md:flex-auto md:w-1/2'>
-        <RightColumn profile={{ about, experience, cvInfo }} />
-      </div>
-    </div>
+    </Provider>
   )
 }
 

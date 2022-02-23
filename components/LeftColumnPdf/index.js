@@ -12,7 +12,7 @@ export default function LeftColumn ({ profile, skills }) {
           {dateNow}
         </p>
         <div className='mt-6 mx-auto text-center'>
-          <Image src={avatar} className='inline-block rounded-full shadow-md' width={190} alt='Foto de Arián Fernández' />
+          <Image src={avatar} className='inline-block rounded-full shadow-md' width={190} height={190} alt='Foto de Arián Fernández' />
         </div>
 
         <div className='mt-8'>

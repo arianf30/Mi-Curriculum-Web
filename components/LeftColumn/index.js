@@ -12,7 +12,7 @@ export default function LeftColumn ({ profile, skills }) {
         <p className='font-mono text-xs h-0 text-arian-naranja'>v1.0.1</p>
         <div className='mt-6 mx-auto text-center'>
           <Zoom overlayBgColorEnd="rgba(0, 0, 0, 0.95)" zoomMargin={40} className='inline-block'>
-            <Image src={avatar} className='inline-block rounded-full' width={190} alt='Foto de Arián Fernández' />
+            <Image src={avatar} className='inline-block rounded-full' width={190} height={190} alt='Foto de Arián Fernández' />
           </Zoom>
         </div>
 
