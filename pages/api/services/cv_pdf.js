@@ -18,8 +18,8 @@ async function generatePdf(file, options, callback) {
   }
 
   const browser = await puppeteer.launch({
-    args: args,
-    ignoreDefaultArgs: ['--disable-extensions']
+    headless: true,
+    args: ['--use-gl=egl']
   });
   const page = await browser.newPage();
 
