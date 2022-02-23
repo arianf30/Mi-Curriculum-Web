@@ -9,7 +9,7 @@ export default function LeftColumn ({ profile, skills }) {
     <div className='flex-auto md:w-full lg:w-96 md:max-h-full overflow-y-auto relative bg-arian-grisoscuro border-r border-arian-grisclaro scrollbar-thin scrollbar-thumb-arian-scroll scrollbar-track-arian-grisoscuro'>
 
       <section className='mx-auto rounded-2xl px-8 py-6 text-arian-blanco'>
-        <p className='font-mono text-xs h-0 text-arian-naranja'>v1.0.1</p>
+        <p className='font-mono text-xs h-0 text-arian-naranja'>v1.2.1</p>
         <div className='mt-6 mx-auto text-center'>
           <Zoom overlayBgColorEnd="rgba(0, 0, 0, 0.95)" zoomMargin={40} className='inline-block'>
             <Image src={avatar} className='inline-block rounded-full' width={190} height={190} alt='Foto de Arián Fernández' />
