@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "dayjs": "1.10.7",
+    "html-pdf-node": "^1.0.8",
     "mongoose": "6.2.3",
     "next": "12.1.0",
     "puppeteer": "^13.4.0",
