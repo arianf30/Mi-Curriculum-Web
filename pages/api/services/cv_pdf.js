@@ -18,8 +18,7 @@ async function generatePdf(file, options, callback) {
   }
 
   const browser = await puppeteer.launch({
-    headless: true,
-    args: ['--use-gl=egl']
+    args: ['--no-sandbox', '--disable-setuid-sandbox']
   });
   const page = await browser.newPage();
 
