@@ -3,7 +3,6 @@ import puppeteer from 'puppeteer'
 import hb from 'handlebars'
 import inlineCss from 'inline-css'
 import Promise from 'bluebird'
-import chromium from 'chromium'
 const options = { format: 'A4', landscape: false, scale: 0.70, printBackground: true }
 const file = { url: 'https://ariannoel.com/cv_format' }
 
@@ -18,8 +17,9 @@ async function generatePdf(file, options, callback) {
     delete options.args;
   }
 
-  const browser = await chromium.puppeteer.launch({
-    args: chromium.args
+  const browser = await puppeteer.launch({
+    args: args,
+    ignoreDefaultArgs: ['--disable-extensions']
   });
   const page = await browser.newPage();
 
