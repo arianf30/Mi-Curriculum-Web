@@ -1,11 +1,11 @@
-import { generatePdf } from 'html-pdf-node'
+import pdf from 'html-pdf-node'
 import stream from 'stream'
 const options = { format: 'A4', landscape: false, scale: 0.70, printBackground: true }
 const file = { url: 'https://ariannoel.com/cv_format' }
 
 export default async function handler (req, res) {
   try {
-    await generatePdf(file, options).then(pdfBuffer => {
+    await pdf.generatePdf(file, options).then(pdfBuffer => {
       // res.setHeader('Content-Type', 'application/pdf')
       // res.send(pdfBuffer)
       const readStream = new stream.PassThrough()
