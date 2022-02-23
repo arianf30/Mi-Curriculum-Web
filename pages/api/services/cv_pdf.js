@@ -6,13 +6,13 @@ const file = { url: 'https://ariannoel.com/cv_format' }
 export default async function handler (req, res) {
   try {
     await pdf.generatePdf(file, options).then(pdfBuffer => {
-      // res.setHeader('Content-Type', 'application/pdf')
-      // res.send(pdfBuffer)
-      const readStream = new stream.PassThrough()
-      readStream.end(pdfBuffer)
-      res.setHeader('Content-disposition', 'attachment; filename=CV - Arián Noel Fernández.pdf')
       res.setHeader('Content-Type', 'application/pdf')
-      readStream.pipe(res)
+      res.send(pdfBuffer)
+      // const readStream = new stream.PassThrough()
+      // readStream.end(pdfBuffer)
+      // res.setHeader('Content-disposition', 'attachment; filename=CV - Arián Noel Fernández.pdf')
+      // res.setHeader('Content-Type', 'application/pdf')
+      // readStream.pipe(res)
     })
   } catch (e) {
     res.status(400).json({ error: true, message: 'Ocurrió un problema al generar el PDF. '+e })
