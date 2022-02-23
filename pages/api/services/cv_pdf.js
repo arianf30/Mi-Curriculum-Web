@@ -18,7 +18,7 @@ async function generatePdf(file, options, callback) {
   }
 
   const browser = await puppeteer.launch({
-    args: ['--no-sandbox', '--disable-setuid-sandbox']
+    args: ['--disable-dev-shm-usage']
   });
   const page = await browser.newPage();
 
