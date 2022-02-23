@@ -9,20 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "bluebird": "^3.7.2",
-    "chromium-version": "^80.0.1",
     "dayjs": "1.10.7",
-    "handlebars": "^4.7.7",
-    "inline-css": "^3.0.0",
     "mongoose": "6.2.3",
     "next": "12.1.0",
     "puppeteer": "^13.4.0",
-    "puppeteer-core": "^13.4.0",
     "react": "17.0.2",
     "react-alert": "7.0.3",
     "react-alert-template-basic": "1.0.2",
     "react-dom": "17.0.2",
-    "react-medium-image-zoom": "4.3.5"
+    "react-medium-image-zoom": "4.3.5",
+    "taiko": "^1.2.8"
   },
   "devDependencies": {
     "autoprefixer": "10.4.2",
