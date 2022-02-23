@@ -15,6 +15,6 @@ export default async function handler (req, res) {
       readStream.pipe(res)
     })
   } catch (e) {
-    res.status(400).json({ error: true, message: 'Ocurrió un problema al generar el PDF.' })
+    res.status(400).json({ error: true, message: 'Ocurrió un problema al generar el PDF. '+e })
   }
 }
