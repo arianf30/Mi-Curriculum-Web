@@ -1,5 +1,5 @@
 import stream from 'stream'
-import puppeteer from 'puppeteer'
+import puppeteer from 'puppeteer-core'
 import hb from 'handlebars'
 import inlineCss from 'inline-css'
 import Promise from 'bluebird'
