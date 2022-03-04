@@ -3,12 +3,12 @@ import Image from 'next/image'
 
 export default function LeftColumn ({ profile, skills }) {
   const dateNow = dayjs(new Date()).locale('es-es').format('DD/MM/YYYY')
-  const { name, lastName, occupation, avatar } = profile
+  const { email, linkedin, github, instagram, name, lastName, occupation, avatar } = profile
   return (
     <div className='flex-auto w-96 overflow-y-auto relative bg-gradient-to-b from-[#fcfcfc] to-[#d0d0d0] border-r-2 border-arian-blanco scrollbar-thin'>
 
       <section className='mx-auto rounded-2xl px-8 py-6 text-arian-grisoscuro'>
-        <p className='font-mono text-xs h-0 text-arian-naranja'>
+        <p className='font-mono text-xs font-bold h-0 text-arian-naranja'>
           {dateNow}
         </p>
         <div className='mt-6 mx-auto text-center'>
@@ -23,6 +23,33 @@ export default function LeftColumn ({ profile, skills }) {
         <p className='font-semibold tracking-wide mt-2.5 text-arian-azul mb-10'>
           <i>{occupation}</i>
         </p>
+
+        {/* CONTACT ME */}
+        <p className='font-mono text-sm font-medium tracking-wide'>
+          {/* Line 1 */}
+          <font className='text-arian-naranja'>export default</font> <font className='text-arian-celeste'><i>function</i></font> <font className='text-arian-azul'>ContactMe</font> <font className='text-arian-grisclaro2'>() {'{'}</font>
+          <br />
+          {/* Line 2 */}
+          <font className='text-arian-naranja pl-4'>return</font> <font className='text-arian-grisclaro2'>(</font>
+        </p>
+        <div className='font-body mt-5 pl-4 text-sm leading-6'>
+          <label className="text-xs font-bold">Correo electrónico</label>
+          <p className='mb-3'>{email}</p>
+          <label className="text-xs font-bold">LinkedIn</label>
+          <p className='mb-3'>{linkedin}</p>
+          <label className="text-xs font-bold">Github</label>
+          <p className='mb-3'>{github}</p>
+          <label className="text-xs font-bold">Instagram</label>
+          <p className='mb-3'>{instagram}</p>
+        </div>
+        <p className='font-mono text-sm font-medium tracking-wide mt-5'>
+          {/* Line 3 */}
+          <font className='text-arian-grisclaro2 pl-4'>)</font>
+          <br />
+          {/* Line 4 */}
+          <font className='text-arian-grisclaro2'>{'}'}</font>
+        </p>
+
 
         <p className='font-mono text-sm font-medium tracking-wide'>
           {/* Line 1 */}
