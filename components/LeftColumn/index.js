@@ -10,7 +10,7 @@ export default function LeftColumn({ profile, skills }) {
       <section className="mx-auto rounded-2xl px-8 py-6 text-arian-blanco">
         <p className="font-mono text-xs h-0 text-arian-naranja">v1.2.1</p>
         <div className="mt-6 mx-auto text-center">
-          {/* <Zoom
+          <Zoom
             overlayBgColorEnd="rgba(0, 0, 0, 0.95)"
             zoomMargin={40}
             className="inline-block"
@@ -22,7 +22,7 @@ export default function LeftColumn({ profile, skills }) {
               height={190}
               alt="Foto de Arián Fernández"
             />
-          </Zoom> */}
+          </Zoom>
         </div>
 
         <div className="mt-8">
